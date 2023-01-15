@@ -1,0 +1,25 @@
+.navbar {
+    padding-top: 25px;
+}
+
+.navbar-brand {
+    padding-left: 113px;
+}
+
+.nav-content {
+    padding-right: 120px;
+}
+
+.nav-item {
+    padding-left: 74px;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-family: 'Poppins-Regular';
+}
+
+.navbar-nav .active {
+    font-size: 20px;
+    font-family: 'Poppins-SemiBold';
+}
