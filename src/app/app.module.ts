@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 import { HomeModule } from './modules/home/home.module';
+import { AdminPanelModule } from './modules/admin-panel/admin-panel.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HomeModule } from './modules/home/home.module';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule,
+    AdminPanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

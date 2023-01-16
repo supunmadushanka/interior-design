@@ -115,10 +115,11 @@
 }
 
 #about-image {
-    padding-left: 120px;
+    padding-left: 8.33%;
     float: left;
-    width: 883px;
+    width: 61.31%;
     height: 525px;
+    
 }
 
 #about-content {
@@ -129,4 +130,113 @@
     width: 223px;
     margin-left: 94px;
     margin-top: 197px;
+}
+
+#ceo-image-container {
+    width: 276px;
+    height: 90px;
+    position: absolute;
+    top: 413;
+    right: 16.38%;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+#ceo-image {
+    height: 56px;
+    width: 51px;
+    float: left;
+    margin: 17px 20px;
+}
+
+#ceo-name {
+    font-family: 'Poppins-SemiBold';
+    font-size: 18px;
+    color: #000000;
+    padding-top: 17px;
+}
+
+#ceo-position {
+    font-family: 'Poppins-Regular';
+    font-size: 18px;
+    color: #9C9C9C;
+}
+
+#ceo-details {
+    float: left;
+}
+
+
+#service-container{
+    display: inline-block;
+    margin-top: 120px;
+    margin-bottom: 500px;
+}
+
+#service-title{
+    display: inline-block;
+    padding: 0px 120px;
+    font-family: 'Poppins-SemiBold';
+    font-size: 36px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#service-des {
+    font-family: 'Poppins-Regular';
+    font-size: 18px;
+    color: #9C9C9C;
+    padding-left: 120px;
+    padding-bottom: 40px;
+}
+
+
+
+#service-list-item {
+    display: inline-block;
+    padding: 0px 120px;
+    margin-left: 120px;
+    width: 883px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.05);
+    padding-top: 30px;
+}
+
+#service-id {
+    font-family: 'Poppins-SemiBold';
+    font-size: 36px;
+    color: #333333;
+    float: left;
+    padding-right: 40px;
+    padding-bottom: 35px;
+}
+
+#service-details-contatiner {
+    float: left;
+}
+
+#service-name {
+    font-family: 'Poppins-SemiBold';
+    font-size: 36px;
+    color: #333333;
+}
+
+#service-arrow {
+    float: right;
+    padding-top: 15px;
+}
+
+#service-image {
+    width: 1076px;
+    height: 525px;
+    position: absolute;
+    top: 304px;
+    right: 120px;
+    z-index: -1;
+}
+
+.plusIcon {
+    float: right;
+    padding-right: 120px;
+    cursor: pointer;
 }
