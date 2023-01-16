@@ -12,23 +12,60 @@
         <div id="count">15+</div>
         <div id="count-details">Years Experience</div>
     </div>
-    <div id="all-right">2022<br/>ALL RIGHT RESERVED</div>
+    <div id="all-right">2022<br />ALL RIGHT RESERVED</div>
     <img id="main-image" src="../../../../assets/main/main.png" alt="Bootstrap" width="100%" height="100%">
 </div>
 
-<div id="about-container" data-aos="fade-right" data-aos-offset="400" data-aos-duration="2000" data-aos-delay="400"> 
+<div id="about-container" data-aos="fade-right" data-aos-offset="400" data-aos-duration="2000" data-aos-delay="300">
     <div id="mini-title-container">
         <div id="mini-title">ABOUT</div>
         <hr id="mini-title-hr">
     </div>
 
     <div id="about-title">
-        “We're one of the best furniture agency. Prioritizing customers and making purchases easy are the hallmarks of our agency.”
+        “We're one of the best furniture agency. Prioritizing customers and making purchases easy are the hallmarks of
+        our agency.”
     </div>
 
-    <img id="about-image" src="../../../../assets/main/about.png" alt="Bootstrap" width="100%" height="100%">
+    <img id="about-image" src="../../../../assets/main/about.png" alt="Bootstrap">
 
-    <div id="about-content">Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.</div>
+    <div id="about-content">Online learning with us does not interfere with your daily life. because learning can be
+        done anytime and anywhere.</div>
 
-    <div>This is test</div>
+    <div id="ceo-image-container">
+        <img id="ceo-image" src="../../../../assets/main/person1.png" alt="Bootstrap" width="100%" height="100%">
+        <div id="ceo-details">
+            <div id="ceo-name">Arga Danaan</div>
+            <div id="ceo-position">CEO of Dananz</div>
+        </div>
+    </div>
+</div>
+
+<div id="service-container" data-aos="fade-right" data-aos-offset="400" data-aos-duration="2000" data-aos-delay="300">
+    <div id="mini-title-container">
+        <div id="mini-title">SERVICES</div>
+        <hr id="mini-title-hr">
+        <fa-icon (click)="navigateAdmin()" class="plusIcon" [icon]="squareIcon" size="2x"></fa-icon>
+    </div>
+
+    <div id="service-title">
+        attractive furniture with the best quality.
+    </div>
+
+    <div id="service-des">
+        Customize your interior design into a dream place<br /> with the best designers and quality furniture. We
+        try<br /> our best to fulfill your expectations.
+    </div>
+
+    <div id="service-list-container">
+        <div *ngFor="let service of serviceList" id="service-list-item">
+            <div id="service-id">0{{service.id}}</div>
+            <div id="service-details-contatiner">
+                <div id="service-name">{{service.name}}</div>
+            </div>
+            <div id="service-arrow"><fa-icon [icon]="arrowIcon"></fa-icon></div>
+        </div>
+    </div>
+
+    <img id="service-image" src="../../../../assets/main/indoor1.png" alt="Bootstrap">
 </div>
