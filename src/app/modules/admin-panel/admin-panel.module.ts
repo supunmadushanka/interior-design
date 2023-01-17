@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ManageServiceComponent } from './manage-service/manage-service.component';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ]
 })
 export class AdminPanelModule { }

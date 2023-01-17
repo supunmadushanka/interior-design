@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { faArrowRight, faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { ServicesService } from 'src/app/core/services/services.service';
+import { Service } from 'src/app/shared/models/servise';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-content',
@@ -14,25 +17,20 @@ export class HomeContentComponent implements OnInit {
   arrowIcon = faArrowRight;
   squareIcon = faSquarePlus;
 
-  serviceList: Array<any> = [
-    {
-      'id': 1,
-      'name': 'Interior Design'
-    },
-    {
-      'id': 2,
-      'name': 'Consultant'
-    },
-    {
-      'id': 3,
-      'name': 'Construction Consultant'
-    },
-  ]
+  public serviceList: Service[] = [];
 
-  constructor(public _router: Router) { }
+  constructor(public _router: Router, private _sericesService: ServicesService) { }
 
   ngOnInit(): void {
     AOS.init();
+
+    this._sericesService.getServices()
+      .subscribe(
+        response => {
+          this.serviceList = response;
+          console.log(response)
+        }
+      );
   }
 
   navigateAdmin() {

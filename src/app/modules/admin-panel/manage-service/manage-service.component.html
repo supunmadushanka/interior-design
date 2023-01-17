@@ -1,1 +1,21 @@
-<p>manage-service works!</p>
+<table class="table">
+    <thead class="thead-dark table-striped">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th class="col-md-6" scope="col">content</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let service of serviceList; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{service.name}}</td>
+            <td>{{service.content}}</td>
+            <td>
+                <fa-icon (click)="deleteRow(i)" [icon]="editIcon" size="1x"></fa-icon>
+                <fa-icon (click)="deleteRow(i)" class="deleteIcon" [icon]="trashIcon" size="1x"></fa-icon>
+            </td>
+        </tr>
+    </tbody>
+</table>

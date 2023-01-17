@@ -58,8 +58,8 @@
     </div>
 
     <div id="service-list-container">
-        <div *ngFor="let service of serviceList" id="service-list-item">
-            <div id="service-id">0{{service.id}}</div>
+        <div *ngFor="let service of serviceList; let i = index" id="service-list-item">
+            <div id="service-id">0{{i+1}}</div>
             <div id="service-details-contatiner">
                 <div id="service-name">{{service.name}}</div>
             </div>
