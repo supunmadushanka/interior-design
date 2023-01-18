@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 
 import { HomeModule } from './modules/home/home.module';
 import { AdminPanelModule } from './modules/admin-panel/admin-panel.module';
@@ -22,7 +23,9 @@ import { ServicesService } from './core/services/services.service';
     RouterModule,
     FontAwesomeModule,
     AdminPanelModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ServicesService],
   bootstrap: [AppComponent]

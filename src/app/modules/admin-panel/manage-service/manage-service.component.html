@@ -1,3 +1,7 @@
+<button class="btn btn-dark add-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample">
+    Add service
+</button>
 <table class="table">
     <thead class="thead-dark table-striped">
         <tr>
@@ -13,9 +17,56 @@
             <td>{{service.name}}</td>
             <td>{{service.content}}</td>
             <td>
-                <fa-icon (click)="deleteRow(i)" [icon]="editIcon" size="1x"></fa-icon>
-                <fa-icon (click)="deleteRow(i)" class="deleteIcon" [icon]="trashIcon" size="1x"></fa-icon>
+                <fa-icon (click)="putData(service)" class="editIcon" [icon]="editIcon" size="1x" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1"
+                aria-controls="offcanvasExample1"></fa-icon>
+                <fa-icon (click)="deleteRow(i,service._id)" class="deleteIcon" [icon]="trashIcon" size="1x"></fa-icon>
             </td>
         </tr>
     </tbody>
 </table>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add Service</h5>
+        <button #closeCanvas type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form [formGroup]="serviceForm" (ngSubmit)="addService()">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Service Name</label>
+                <input [class.is-invalid]="serviceForm.get('name')?.invalid && serviceForm.get('name')?.touched" type="email"
+                    class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Service Content</label>
+                <textarea [class.is-invalid]="serviceForm.get('content')?.invalid && serviceForm.get('content')?.touched" 
+                class="form-control content-input" id="exampleInputPassword1" formControlName="content"></textarea>
+            </div>
+            <button type="submit" [disabled]="serviceForm.invalid" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Edit Service</h5>
+        <button #closeCanvas1 type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form [formGroup]="serviceForm" (ngSubmit)="editService(editingServiceID)">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Service Name</label>
+                <input [class.is-invalid]="serviceForm.get('name')?.invalid && serviceForm.get('name')?.touched" type="email"
+                    class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Service Content</label>
+                <textarea [class.is-invalid]="serviceForm.get('content')?.invalid && serviceForm.get('content')?.touched" 
+                class="form-control content-input" id="exampleInputPassword1" formControlName="content"></textarea>
+            </div>
+            <button type="submit" [disabled]="serviceForm.invalid" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+</div>

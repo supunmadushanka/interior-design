@@ -27,7 +27,7 @@ export class HomeContentComponent implements OnInit {
     this._sericesService.getServices()
       .subscribe(
         response => {
-          this.serviceList = response;
+          this.serviceList = response.slice(0, 3);;
           console.log(response)
         }
       );
