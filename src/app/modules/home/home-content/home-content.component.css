@@ -165,13 +165,13 @@
 }
 
 
-#service-container{
+#service-container {
     padding-top: 120px;
     margin-bottom: 500px;
     clear: both;
 }
 
-#service-title{
+#service-title {
     display: inline-block;
     padding: 0px 120px;
     font-family: 'Poppins-SemiBold';
@@ -238,4 +238,11 @@
     float: right;
     padding-right: 120px;
     cursor: pointer;
+}
+
+.login {
+    margin-left: 120px;
+    margin-top: 20px;
+    width: 120px;
+    height: 50px;
 }

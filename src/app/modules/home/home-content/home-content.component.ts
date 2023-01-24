@@ -37,5 +37,9 @@ export class HomeContentComponent implements OnInit {
     this._router.navigate(['manage-services']);
   }
 
+  navigateLogin(){
+    this._router.navigate(['login']);
+  }
+
 }
 
